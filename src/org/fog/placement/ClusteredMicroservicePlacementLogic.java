@@ -57,10 +57,10 @@ public class ClusteredMicroservicePlacementLogic implements MicroservicePlacemen
         this.applicationInfo = applicationInfo;
 
         setCurrentCpuLoad(new HashMap<Integer, Double>());
-        setCurrentModuleMap(new HashMap<>());
+        setCurrentModuleMap(new HashMap<Integer, List<String>>());
         for (FogDevice dev : fogDevices) {
             getCurrentCpuLoad().put(dev.getId(), 0.0);
-            getCurrentModuleMap().put(dev.getId(), new ArrayList<>());
+            getCurrentModuleMap().put(dev.getId(), new ArrayList<String>());
             currentModuleLoadMap.put(dev.getId(), new HashMap<String, Double>());
             currentModuleInstanceNum.put(dev.getId(), new HashMap<String, Integer>());
         }

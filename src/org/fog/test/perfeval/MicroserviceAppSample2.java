@@ -323,12 +323,12 @@ public class MicroserviceAppSample2 {
         int userId = Math.toIntExact((long) applicationParameters.get("userId"));
         Application application = Application.createApplication(appId, userId); // creates an empty application model (empty directed graph)
 
-        String client = "client" + appId;
-        String mService1 = "mService1" + appId;
-        String mService2 = "mService2" + appId;
+        final String client = "client" + appId;
+        final String mService1 = "mService1" + appId;
+        final String mService2 = "mService2" + appId;
 //        String mService3 = "mService3" + appId;
-        String sensor = "sensor" + appId;
-        String actuator = "actuator" + appId;
+        final String sensor = "sensor" + appId;
+        final String actuator = "actuator" + appId;
 
         /*
          * Connecting the application modules (vertices) in the application model (directed graph) with edges

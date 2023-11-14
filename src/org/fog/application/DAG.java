@@ -17,7 +17,7 @@ public class DAG {
         V = vertices.size();
         this.vertices =vertices;
         for(String vertice:vertices){
-            adj.put(vertice,new LinkedList<>());
+            adj.put(vertice,new LinkedList<String>());
        }
 
     }
